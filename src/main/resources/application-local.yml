@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/demo-security
-    driverClassName: org.postgresql.Driver
-    username: postgres
+    url: jdbc:mysql://localhost/demo-security?serverTimezone=Europe/Warsaw&createDatabaseIfNotExist=true
+    driverClassName: com.mysql.jdbc.Driver
+    username: marcin
     password: masterkey
   jpa:
     hibernate:

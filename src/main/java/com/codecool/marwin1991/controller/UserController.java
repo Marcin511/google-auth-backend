@@ -18,7 +18,9 @@ public class UserController {
 
     @GetMapping("/profile")
     //TODO sprawdzić czy ma role user korzystajać z @PreAuthorize
+    @PreAuthorize("hasRole('USER')")
     public AppUser getCurrentUser(@CurrentUser UserPrincipal userPrincipal){
-        throw new RuntimeException("not implemented");
+        return userRepository.findById(userPrincipal.getId())
+                .orElseThrow(()-> new ResourceNotFoundException("User","id",userPrincipal.getId()));
     }
 }
