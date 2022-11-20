@@ -12,11 +12,10 @@ import javax.persistence.Id;
 @Data
 public class AppUser {
 
-    // TODO this class should be entity with fields
-    //  id; (as String with uuid2 strategy)
+
     @Id
     @GeneratedValue(generator = "uuid")
-    @GenericGenerator(name = "uuid2", strategy = "uuid2")
+    @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
     private String name;
     private String email;
@@ -27,12 +26,6 @@ public class AppUser {
     private AuthProvider provider;
     private String providerId;
 
-    //  name;
-    //  email;
-    //  imageUrl;
-    //  emailVerified default false;
-    //  password default null;
-    //  AuthProvider provider;
-    //  String providerId;
+
 
 }

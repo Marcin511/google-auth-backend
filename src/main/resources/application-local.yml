@@ -1,10 +1,11 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost/demo-security?serverTimezone=Europe/Warsaw&createDatabaseIfNotExist=true
-    driverClassName: com.mysql.jdbc.Driver
-    username: marcin
-    password: masterkey
+    url: jdbc:mysql://localhost/backendsecurity
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: root
+    password: Residentevil.2
   jpa:
+
     hibernate:
       ddl-auto: create-drop
     show-sql: true
@@ -15,3 +16,4 @@ app:
   tokenExpirationMsec: 864000000
   authorizedRedirectUris:
     - http://localhost:3000/oauth2/redirect
+
